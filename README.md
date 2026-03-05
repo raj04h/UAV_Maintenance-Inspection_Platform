@@ -1,8 +1,10 @@
-![image](https://github.com/user-attachments/assets/8f31ac73-7625-4177-afd9-c7a79f674ccd)
 # UAV Maintenance App
 
 An Android application designed to streamline UAV (Unmanned Aerial Vehicle) maintenance and inspection workflows. 
 The app leverages machine learning (TensorFlow Lite) for damage detection, generative AI for technical solutions, QR/RFID scanning for asset identification, and Firebase for real-time data storage.
+
+# App Working
+![image](https://github.com/user-attachments/assets/8f31ac73-7625-4177-afd9-c7a79f674ccd)
 
 # Features
 Uses a TensorFlow Lite model (UavDamage) to detect various damage types (scratches, pitting, etc.).
