@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "133870100470",
+    "firebase_url": "https://dr-uav-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "dr-uav",
+    "storage_bucket": "dr-uav.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133870100470:android:28c6e6636ede3349f2b1d7",
+        "android_client_info": {
+          "package_name": "com.hr.druav"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "use your own"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/text_border"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/drlogo"
+            android:contentDescription="Profile Image" />
+
+        <!-- UAV Name -->
+        <EditText
+            android:id="@+id/uav_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="UAV Name: Verti Plane"
+            android:textColor="#FF6D00"
+            android:textSize="20sp" />
+
+        <!-- UAV ID -->
+        <EditText
+            android:id="@+id/uav_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="UAV ID: 12345"
+            android:textColor="#FF6D00"
+            android:textSize="20sp" />
+
+        <!-- Pilot Name -->
+        <EditText
+            android:id="@+id/pilot_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="Pilot Name: John Doe"
+            android:textColor="#FF6D00"
+            android:textSize="20sp" />
+
+        <!-- Pilot ID -->
+        <EditText
+            android:id="@+id/pilot_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="Pilot ID: PILOT-9876"
+            android:textColor="#FF6D00"
+            android:textSize="20sp" />
+
+        <!-- Checklist Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/text_border"
+            android:padding="12dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/checklist_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checklist"
+                android:textColor="#FF6D00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:id="@+id/physical_checklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Physical Check"
+                android:textColor="#FF6D00"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp" />
+
+            <CheckBox
+                android:id="@+id/technical_checklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Technical Check"
+                android:textColor="#FF6D00"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Predicted Maintenance Date TextView -->
+        <TextView
+            android:id="@+id/pred_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:text="Next Date: "
+            android:textColor="#FF6D00"
+            android:textSize="20dp"
+            android:background="@drawable/text_border"
+            android:gravity="center" />
+
+        <!-- Company Details -->
+        <TextView
+            android:id="@+id/company_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company: Tech Aviation"
+            android:textColor="#FF6D00"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/service_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email: support@aviation.com"
+            android:textColor="#FF6D00"
+            android:textSize="10dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_scanner">
+
+    <fragment
+        android:id="@+id/nav_scanner"
+        android:name="com.hr.druav.ui.scanner.ScannerFragment"
+        android:label="Scanner"
+        tools:layout="@layout/fragment_scanner" >
+        <action
+            android:id="@+id/action_nav_scanner_to_nav_network"
+            app:destination="@id/nav_network" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_network"
+        android:name="com.hr.druav.ui.network.NetworkFragment"
+        android:label="Network"
+        tools:layout="@layout/fragment_network" >
+        <action
+            android:id="@+id/action_nav_network_to_nav_intelligence"
+            app:destination="@id/nav_intelligence" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_intelligence"
+        android:name="com.hr.druav.ui.intelligence.IntelligenceFragment"
+        android:label="Intelligence"
+        tools:layout="@layout/fragment_intelligence" />
+
+
+</navigation>

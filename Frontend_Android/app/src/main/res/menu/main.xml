@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_scanner"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Physical"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/nav_network"
+        android:icon="@drawable/baseline_network_check_24"
+        android:title="Technical"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/nav_intelligence"
+        android:icon="@drawable/baseline_location_pin_24"
+        android:title="UAV Location"
+        app:showAsAction="collapseActionView" />
+</menu>
