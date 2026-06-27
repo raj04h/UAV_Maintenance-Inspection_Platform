@@ -1,0 +1,739 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Drone MRO Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-arrow::after {
+            content: '→';
+            font-size: 2rem;
+            color: #7a5195;
+            margin: 0 1rem;
+        }
+        .flow-item {
+            flex: 1;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-16">
+
+        <header class="text-center mb-16 md:mb-24">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003f5c] mb-4">The Future of Drone Operations</h1>
+            <p class="text-xl md:text-2xl text-[#374c80] max-w-3xl mx-auto">Automating Maintenance, Repair, and Operations (MRO) with AI-Powered Vision</p>
+        </header>
+
+        <section id="problem" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">The Manual MRO Bottleneck</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Traditional drone inspections are slow, labor-intensive, and reactive, leading to increased downtime and operational risks.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#ef5675]">
+                    <h3 class="text-2xl font-bold mb-4 text-[#ef5675]">Manual Inspection ❌</h3>
+                    <ul class="space-y-2 text-gray-700 list-inside">
+                        <li>Time-consuming and resource-heavy</li>
+                        <li>Prone to human error and inconsistency</li>
+                        <li>Detects issues only after they occur</li>
+                        <li>Requires physical handling for every check</li>
+                        <li>Difficult to scale with a growing fleet</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#7a5195]">
+                    <h3 class="text-2xl font-bold mb-4 text-[#7a5195]">Automated Inspection ✅</h3>
+                    <ul class="space-y-2 text-gray-700 list-inside">
+                        <li>Continuous, real-time monitoring</li>
+                        <li>Consistent and objective analysis</li>
+                        <li>Predicts failures before they happen</li>
+                        <li>No-touch inspection via CCTV</li>
+                        <li>Scales effortlessly with fleet size</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">The AI Vision Solution</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Our system leverages existing CCTV infrastructure to create a seamless, automated inspection and maintenance prediction workflow.</p>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <div class="flex flex-wrap items-center justify-center text-center gap-y-4">
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">📷</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">CCTV Input</h4>
+                        <p class="text-sm text-gray-600">Live video feed</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">🤖</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">AI Analysis</h4>
+                        <p class="text-sm text-gray-600">Drone, Part & Defect ID</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">🔮</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">Prediction</h4>
+                        <p class="text-sm text-gray-600">Maintenance need</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">🔔</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">Alert & Report</h4>
+                        <p class="text-sm text-gray-600">Actionable insights</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Deconstructing the AI</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">The system uses a multi-layered approach to move from raw pixels to predictive maintenance alerts.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#374c80]">Common Defect Distribution</h3>
+                    <p class="text-center text-sm text-gray-600 mb-4">The AI is trained to identify a wide range of defects, with some being more prevalent. This chart shows a typical distribution of detected issues across a fleet.</p>
+                    <div class="chart-container">
+                        <canvas id="defectDistributionChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#374c80]">Component Inspection Priority</h3>
+                    <p class="text-center text-sm text-gray-600 mb-4">Not all parts are equal. The system prioritizes components most critical to flight safety and performance for detailed analysis.</p>
+                    <div class="chart-container">
+                        <canvas id="partPriorityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Powering the Vision</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Selecting the right AI model is a balance of speed, accuracy, and resource cost. We evaluate models to find the optimal fit for real-time MRO.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-center mb-4 text-[#374c80]">AI Model Performance Comparison</h3>
+                <p class="text-center text-sm text-gray-600 mb-4">This comparison highlights the trade-offs between popular object detection architectures for the task of drone inspection.</p>
+                <div class="chart-container">
+                    <canvas id="modelComparisonChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Transformative Impact</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Automated MRO delivers significant operational and financial advantages.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Improved Safety</h3>
+                    <p class="text-gray-600 mt-2">Identifies critical structural issues before they lead to in-flight failures.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Increased Efficiency</h3>
+                    <p class="text-gray-600 mt-2">Reduces inspection time from hours to minutes, maximizing drone uptime.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Cost Reduction</h3>
+                    <p class="text-gray-600 mt-2">Minimizes labor costs and prevents expensive catastrophic failures.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Data-Driven Insights</h3>
+                    <p class="text-gray-600 mt-2">Collects data on wear patterns to inform future purchasing and design.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 mt-16">
+            <p>Visualizing the future of autonomous drone fleet management.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLen = 16;
+            if (label.length <= maxLen) return label;
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLen && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            }
+            if (currentLine) lines.push(currentLine);
+            return lines;
+        };
+
+        const colors = {
+            blueDark: '#003f5c',
+            blueMid: '#374c80',
+            purple: '#7a5195',
+            pinkDark: '#bc5090',
+            pinkLight: '#ef5675',
+            orange: '#ff764a',
+            yellow: '#ffa600'
+        };
+
+        const chartFont = {
+            family: 'Inter',
+            size: 12,
+        };
+
+        const defectDistributionCtx = document.getElementById('defectDistributionChart').getContext('2d');
+        new Chart(defectDistributionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Propeller Damage', 'Arm/Boom Cracks', 'Landing Gear Wear', 'Fuselage Dents', 'Sensor Obstruction', 'Other'],
+                datasets: [{
+                    label: 'Defect Distribution',
+                    data: [42, 18, 15, 10, 8, 7],
+                    backgroundColor: [colors.pinkLight, colors.orange, colors.yellow, colors.purple, colors.blueMid, colors.blueDark],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: chartFont
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const partPriorityCtx = document.getElementById('partPriorityChart').getContext('2d');
+        new Chart(partPriorityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Propellers', 'Motor Mounts', 'Arms / Booms', 'Camera / Gimbal', 'Landing Gear', 'Fuselage / Body'],
+                datasets: [{
+                    label: 'Inspection Priority Score',
+                    data: [95, 90, 85, 75, 70, 60],
+                    backgroundColor: [colors.purple, colors.pinkDark, colors.pinkLight, colors.orange, colors.yellow, colors.blueMid],
+                    borderColor: 'rgba(0,0,0,0)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false,
+                        },
+                        ticks: { font: chartFont }
+                    },
+                    y: {
+                        grid: {
+                            display: true,
+                        },
+                        ticks: { font: chartFont }
+                    }
+                },
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        const modelComparisonCtx = document.getElementById('modelComparisonChart').getContext('2d');
+        const modelLabels = ['Speed (FPS)', ['Small Defect', 'Detection'], 'Accuracy (mAP)', ['Resource', 'Cost (GPU)'], ['Segmentation', 'Capability']];
+        new Chart(modelComparisonCtx, {
+            type: 'radar',
+            data: {
+                labels: modelLabels.map(l => Array.isArray(l) ? l : wrapLabel(l)),
+                datasets: [
+                    {
+                        label: 'YOLOv8 (One-Stage)',
+                        data: [9, 6, 7, 3, 2],
+                        backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                        borderColor: colors.pinkLight,
+                        pointBackgroundColor: colors.pinkLight,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colors.pinkLight
+                    },
+                    {
+                        label: 'Mask R-CNN (Two-Stage)',
+                        data: [4, 9, 9, 8, 10],
+                        backgroundColor: 'rgba(122, 81, 149, 0.2)',
+                        borderColor: colors.purple,
+                        pointBackgroundColor: colors.purple,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colors.purple
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        pointLabels: {
+                            font: chartFont
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(0,0,0,0)'
+                        }
+                    }
+                },
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: chartFont
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Drone MRO Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-arrow::after {
+            content: '→';
+            font-size: 2rem;
+            color: #7a5195;
+            margin: 0 1rem;
+        }
+        .flow-item {
+            flex: 1;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-16">
+
+        <header class="text-center mb-16 md:mb-24">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003f5c] mb-4">The Future of Drone Operations</h1>
+            <p class="text-xl md:text-2xl text-[#374c80] max-w-3xl mx-auto">Automating Maintenance, Repair, and Operations (MRO) with AI-Powered Vision</p>
+        </header>
+
+        <section id="problem" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">The Manual MRO Bottleneck</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Traditional drone inspections are slow, labor-intensive, and reactive, leading to increased downtime and operational risks.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#ef5675]">
+                    <h3 class="text-2xl font-bold mb-4 text-[#ef5675]">Manual Inspection ❌</h3>
+                    <ul class="space-y-2 text-gray-700 list-inside">
+                        <li>Time-consuming and resource-heavy</li>
+                        <li>Prone to human error and inconsistency</li>
+                        <li>Detects issues only after they occur</li>
+                        <li>Requires physical handling for every check</li>
+                        <li>Difficult to scale with a growing fleet</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#7a5195]">
+                    <h3 class="text-2xl font-bold mb-4 text-[#7a5195]">Automated Inspection ✅</h3>
+                    <ul class="space-y-2 text-gray-700 list-inside">
+                        <li>Continuous, real-time monitoring</li>
+                        <li>Consistent and objective analysis</li>
+                        <li>Predicts failures before they happen</li>
+                        <li>No-touch inspection via CCTV</li>
+                        <li>Scales effortlessly with fleet size</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">The AI Vision Solution</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Our system leverages existing CCTV infrastructure to create a seamless, automated inspection and maintenance prediction workflow.</p>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <div class="flex flex-wrap items-center justify-center text-center gap-y-4">
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">📷</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">CCTV Input</h4>
+                        <p class="text-sm text-gray-600">Live video feed</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">🤖</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">AI Analysis</h4>
+                        <p class="text-sm text-gray-600">Drone, Part & Defect ID</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">🔮</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">Prediction</h4>
+                        <p class="text-sm text-gray-600">Maintenance need</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flow-item p-4 bg-blue-50 rounded-lg">
+                        <div class="text-4xl">🔔</div>
+                        <h4 class="font-bold mt-2 text-[#003f5c]">Alert & Report</h4>
+                        <p class="text-sm text-gray-600">Actionable insights</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Deconstructing the AI</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">The system uses a multi-layered approach to move from raw pixels to predictive maintenance alerts.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#374c80]">Common Defect Distribution</h3>
+                    <p class="text-center text-sm text-gray-600 mb-4">The AI is trained to identify a wide range of defects, with some being more prevalent. This chart shows a typical distribution of detected issues across a fleet.</p>
+                    <div class="chart-container">
+                        <canvas id="defectDistributionChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#374c80]">Component Inspection Priority</h3>
+                    <p class="text-center text-sm text-gray-600 mb-4">Not all parts are equal. The system prioritizes components most critical to flight safety and performance for detailed analysis.</p>
+                    <div class="chart-container">
+                        <canvas id="partPriorityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Powering the Vision</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Selecting the right AI model is a balance of speed, accuracy, and resource cost. We evaluate models to find the optimal fit for real-time MRO.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-center mb-4 text-[#374c80]">AI Model Performance Comparison</h3>
+                <p class="text-center text-sm text-gray-600 mb-4">This comparison highlights the trade-offs between popular object detection architectures for the task of drone inspection.</p>
+                <div class="chart-container">
+                    <canvas id="modelComparisonChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="mb-16 md:mb-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Transformative Impact</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Automated MRO delivers significant operational and financial advantages.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Improved Safety</h3>
+                    <p class="text-gray-600 mt-2">Identifies critical structural issues before they lead to in-flight failures.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Increased Efficiency</h3>
+                    <p class="text-gray-600 mt-2">Reduces inspection time from hours to minutes, maximizing drone uptime.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Cost Reduction</h3>
+                    <p class="text-gray-600 mt-2">Minimizes labor costs and prevents expensive catastrophic failures.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold text-[#003f5c]">Data-Driven Insights</h3>
+                    <p class="text-gray-600 mt-2">Collects data on wear patterns to inform future purchasing and design.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 mt-16">
+            <p>Visualizing the future of autonomous drone fleet management.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLen = 16;
+            if (label.length <= maxLen) return label;
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLen && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            }
+            if (currentLine) lines.push(currentLine);
+            return lines;
+        };
+
+        const colors = {
+            blueDark: '#003f5c',
+            blueMid: '#374c80',
+            purple: '#7a5195',
+            pinkDark: '#bc5090',
+            pinkLight: '#ef5675',
+            orange: '#ff764a',
+            yellow: '#ffa600'
+        };
+
+        const chartFont = {
+            family: 'Inter',
+            size: 12,
+        };
+
+        const defectDistributionCtx = document.getElementById('defectDistributionChart').getContext('2d');
+        new Chart(defectDistributionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Propeller Damage', 'Arm/Boom Cracks', 'Landing Gear Wear', 'Fuselage Dents', 'Sensor Obstruction', 'Other'],
+                datasets: [{
+                    label: 'Defect Distribution',
+                    data: [42, 18, 15, 10, 8, 7],
+                    backgroundColor: [colors.pinkLight, colors.orange, colors.yellow, colors.purple, colors.blueMid, colors.blueDark],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: chartFont
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const partPriorityCtx = document.getElementById('partPriorityChart').getContext('2d');
+        new Chart(partPriorityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Propellers', 'Motor Mounts', 'Arms / Booms', 'Camera / Gimbal', 'Landing Gear', 'Fuselage / Body'],
+                datasets: [{
+                    label: 'Inspection Priority Score',
+                    data: [95, 90, 85, 75, 70, 60],
+                    backgroundColor: [colors.purple, colors.pinkDark, colors.pinkLight, colors.orange, colors.yellow, colors.blueMid],
+                    borderColor: 'rgba(0,0,0,0)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false,
+                        },
+                        ticks: { font: chartFont }
+                    },
+                    y: {
+                        grid: {
+                            display: true,
+                        },
+                        ticks: { font: chartFont }
+                    }
+                },
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        const modelComparisonCtx = document.getElementById('modelComparisonChart').getContext('2d');
+        const modelLabels = ['Speed (FPS)', ['Small Defect', 'Detection'], 'Accuracy (mAP)', ['Resource', 'Cost (GPU)'], ['Segmentation', 'Capability']];
+        new Chart(modelComparisonCtx, {
+            type: 'radar',
+            data: {
+                labels: modelLabels.map(l => Array.isArray(l) ? l : wrapLabel(l)),
+                datasets: [
+                    {
+                        label: 'YOLOv8 (One-Stage)',
+                        data: [9, 6, 7, 3, 2],
+                        backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                        borderColor: colors.pinkLight,
+                        pointBackgroundColor: colors.pinkLight,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colors.pinkLight
+                    },
+                    {
+                        label: 'Mask R-CNN (Two-Stage)',
+                        data: [4, 9, 9, 8, 10],
+                        backgroundColor: 'rgba(122, 81, 149, 0.2)',
+                        borderColor: colors.purple,
+                        pointBackgroundColor: colors.purple,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colors.purple
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        pointLabels: {
+                            font: chartFont
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(0,0,0,0)'
+                        }
+                    }
+                },
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: chartFont
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+>>>>>>> 13083e4624ef0302cebf9abf21eedfc00c37e980
